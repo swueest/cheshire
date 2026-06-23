@@ -9,6 +9,7 @@
 
 `include "cheshire_soc_regs.rdl"
 `include "slink_reg.rdl"
+`include "axi_vga.rdl"
 
 // User-defined property for executable memory regions (used by ldh format)
 property executable {
@@ -108,7 +109,7 @@ addrmap cheshire #(longint unsigned SlinkNumLanes = 4) {
     slink_reg #(.NumLanes(SlinkNumLanes)) slink @0x0300_6000;
 
     // AXI VGA (4 KiB)
-    periph_stub_t #(.Size(0x0000_1000)) vga     @0x0300_7000;
+    axi_vga vga @0x0300_7000;
 
     // USB (4 KiB)
     periph_stub_t #(.Size(0x0000_1000)) usb     @0x0300_8000;
