@@ -57,7 +57,7 @@ PROVIDE(__slink_base_addr__ = 0x03006000);
 PROVIDE(__slink_size__ = 0x00000804);
 
 PROVIDE(__vga_base_addr__ = 0x03007000);
-PROVIDE(__vga_size__ = 0x00001000);
+PROVIDE(__vga_size__ = 0x0000003C);
 
 PROVIDE(__usb_base_addr__ = 0x03008000);
 PROVIDE(__usb_size__ = 0x00001000);
@@ -204,9 +204,35 @@ PROVIDE(__slink_channel_alloc_rx_ch_en_0_base_addr__ = 0x03006800);
 PROVIDE(__slink_channel_alloc_rx_ch_en_num__ = 0x00000001);
 PROVIDE(__slink_channel_alloc_rx_ch_en_stride__ = 0x00000004);
 
-PROVIDE(__vga_status_base_addr__ = 0x03007000);
+PROVIDE(__vga_control_base_addr__ = 0x03007000);
 
-PROVIDE(__vga__end_base_addr__ = 0x03007FFC);
+PROVIDE(__vga_clk_div_base_addr__ = 0x03007004);
+
+PROVIDE(__vga_hori_visible_size_base_addr__ = 0x03007008);
+
+PROVIDE(__vga_hori_front_porch_size_base_addr__ = 0x0300700C);
+
+PROVIDE(__vga_hori_sync_size_base_addr__ = 0x03007010);
+
+PROVIDE(__vga_hori_back_porch_size_base_addr__ = 0x03007014);
+
+PROVIDE(__vga_vert_visible_size_base_addr__ = 0x03007018);
+
+PROVIDE(__vga_vert_front_porch_size_base_addr__ = 0x0300701C);
+
+PROVIDE(__vga_vert_sync_size_base_addr__ = 0x03007020);
+
+PROVIDE(__vga_vert_back_porch_size_base_addr__ = 0x03007024);
+
+PROVIDE(__vga_start_addr_low_base_addr__ = 0x03007028);
+
+PROVIDE(__vga_start_addr_high_base_addr__ = 0x0300702C);
+
+PROVIDE(__vga_frame_size_base_addr__ = 0x03007030);
+
+PROVIDE(__vga_burst_len_base_addr__ = 0x03007034);
+
+PROVIDE(__vga_burst_split_len_base_addr__ = 0x03007038);
 
 PROVIDE(__usb_status_base_addr__ = 0x03008000);
 

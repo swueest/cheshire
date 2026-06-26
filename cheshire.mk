@@ -28,7 +28,7 @@ CHS_LLC_DIR   := $(shell $(BENDER) path axi_llc)
 OTPROOT           := $(shell $(BENDER) path opentitan_peripherals)
 CLINTROOT         := $(shell $(BENDER) path clint)
 AXIRTROOT         := $(shell $(BENDER) path axi_rt)
-AXI_VGA_ROOT 	  := /mnt/c/Users/serge/Desktop/Master2/SoCDAML/axi_vga
+AXI_VGA_ROOT 	  := $(shell $(BENDER) path axi_vga)
 IDMA_ROOT         := $(shell $(BENDER) path idma)
 DRAM_RTL_SIM_ROOT := $(shell $(BENDER) path dram_rtl_sim)
 

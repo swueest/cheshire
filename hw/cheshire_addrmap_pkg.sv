@@ -48,7 +48,7 @@ localparam longint unsigned SLINK_BASE_ADDR = 64'h3006000;
 localparam longint unsigned SLINK_SIZE = 64'h804;
 
 localparam longint unsigned VGA_BASE_ADDR = 64'h3007000;
-localparam longint unsigned VGA_SIZE = 64'h1000;
+localparam longint unsigned VGA_SIZE = 64'h3C;
 
 localparam longint unsigned USB_BASE_ADDR = 64'h3008000;
 localparam longint unsigned USB_SIZE = 64'h1000;
@@ -141,8 +141,21 @@ function automatic longint unsigned SLINK_CHANNEL_ALLOC_RX_CH_EN_BASE_ADDR(input
     return 64'h3006800 + (channel_alloc_rx_ch_en_idx * 64'h4);
 endfunction
 localparam longint unsigned SLINK_CHANNEL_ALLOC_RX_CH_EN_NUM = 64'h1;
-localparam longint unsigned VGA_STATUS_BASE_ADDR = 64'h3007000;
-localparam longint unsigned VGA__END_BASE_ADDR = 64'h3007FFC;
+localparam longint unsigned VGA_CONTROL_BASE_ADDR = 64'h3007000;
+localparam longint unsigned VGA_CLK_DIV_BASE_ADDR = 64'h3007004;
+localparam longint unsigned VGA_HORI_VISIBLE_SIZE_BASE_ADDR = 64'h3007008;
+localparam longint unsigned VGA_HORI_FRONT_PORCH_SIZE_BASE_ADDR = 64'h300700C;
+localparam longint unsigned VGA_HORI_SYNC_SIZE_BASE_ADDR = 64'h3007010;
+localparam longint unsigned VGA_HORI_BACK_PORCH_SIZE_BASE_ADDR = 64'h3007014;
+localparam longint unsigned VGA_VERT_VISIBLE_SIZE_BASE_ADDR = 64'h3007018;
+localparam longint unsigned VGA_VERT_FRONT_PORCH_SIZE_BASE_ADDR = 64'h300701C;
+localparam longint unsigned VGA_VERT_SYNC_SIZE_BASE_ADDR = 64'h3007020;
+localparam longint unsigned VGA_VERT_BACK_PORCH_SIZE_BASE_ADDR = 64'h3007024;
+localparam longint unsigned VGA_START_ADDR_LOW_BASE_ADDR = 64'h3007028;
+localparam longint unsigned VGA_START_ADDR_HIGH_BASE_ADDR = 64'h300702C;
+localparam longint unsigned VGA_FRAME_SIZE_BASE_ADDR = 64'h3007030;
+localparam longint unsigned VGA_BURST_LEN_BASE_ADDR = 64'h3007034;
+localparam longint unsigned VGA_BURST_SPLIT_LEN_BASE_ADDR = 64'h3007038;
 localparam longint unsigned USB_STATUS_BASE_ADDR = 64'h3008000;
 localparam longint unsigned USB__END_BASE_ADDR = 64'h3008FFC;
 localparam longint unsigned BUS_ERR_STATUS_BASE_ADDR = 64'h3009000;

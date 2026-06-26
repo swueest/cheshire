@@ -1,2 +1,3 @@
-package_links:
-  axi_vga: ../axi_vga
+dependencies:
+  axi_vga:
+    path: ../axi_vga
